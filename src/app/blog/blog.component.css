@@ -1,0 +1,83 @@
+.container{
+    padding: 3%;
+}
+.filter{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+     margin: auto!important;
+}
+.box-2{
+    overflow: hidden;
+}
+.filter span{
+    color: #445045; 
+  
+}
+
+.post{
+    margin: auto!important;
+    position: relative;
+    overflow: hidden;
+    padding: 1.3%;
+
+}
+.img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto!important;
+}
+
+
+
+
+
+/*Post*/
+.post{
+    overflow: hidden;
+    position: relative;
+}
+.post img {
+    transform: scaleY(1);
+    transition: all 0.7s ease-in-out;
+    
+    }
+    .post .card-body {
+    background-color:#9fd4caa1;
+    transition: all 0.5s linear;
+    opacity: 0;
+    position: absolute;
+    bottom: 1px;
+    }
+    .post h3{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+   
+    transform: scale(0);
+    color: #445045;
+    transition: all 0.5s linear;
+    opacity: 0;
+    }
+    .post p {
+    color: #445045;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    }
+      
+    .post:hover img {
+    transform: scale(1.5);
+    opacity: 0.2;
+    }
+    .post:hover .card-body {
+    opacity: 1;
+    }
+    .post:hover h3,
+    .post:hover p,
+    .post:hover a.link{
+    transform: scale(1);
+    opacity: 1;
+    }
