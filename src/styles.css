@@ -1,7 +1,4 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-
 header{
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +7,7 @@ header{
     height: 30%;
   background-color: #445045; ;
   overflow: hidden;
+  font-family: 'Concert One', cursive;
 }
 box-2{
 	overflow: hidden;
@@ -46,6 +44,12 @@ div[class*=box] {
 	position: relative;	
  
    
+}
+.btn-two a{
+	color: #FFF;
+}
+.btn-two a:hover{
+	color: #9FD4CA;
 }
 .btn-two span {
 	z-index: 2;	
@@ -94,4 +98,3 @@ div[class*=box] {
 
 
 }
- 

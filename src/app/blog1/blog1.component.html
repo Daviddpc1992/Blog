@@ -1,0 +1,33 @@
+<div class="selector">
+    <select class="form-select" (change)="onChange($event)">
+        <option value="todos">Todos</option>
+        <option value="viajes">Viajes</option>
+        <option value="foto">Fotografía</option>
+        <option value="comida">Comida</option>
+
+    </select>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 post" *ngFor="let post of PostList">
+            <img [src]="post.imagen" class="img" alt="...">
+            <div class="card-body">
+                <a href="">
+                    <h3 class="card-title">{{post.titulo}}</h3>
+                </a>
+                <p class="card-text">{{post.texto}}</p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="boton">
+    <div class="box-2">
+        <div class="btn btn-two btn-final">
+            <button type="submit" value="Enviar" (click)="Cambiarmostrar()"> Añadir Post</button>
+        </div>
+    </div>
+</div>
+
+<app-formulario [ngStyle]="mostrar"></app-formulario>
