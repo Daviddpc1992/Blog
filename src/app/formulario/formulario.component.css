@@ -1,0 +1,145 @@
+form{
+    padding: 2%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border: 1px outset #9fd4ca98; ;
+}
+.desplegables{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ input, select{
+     border-radius: 0px;
+     border: none;
+     border-bottom: 1px solid #9fd4ca98;
+     font-family: 'Montserrat Alternates', sans-serif;
+     text-align: center;
+ }
+textarea{
+    text-align: center;
+    border-radius: 0px;
+    width: 80%;
+    height: 300px!important;
+    border: none;
+    border-top: 1px solid #9fd4ca98;
+    border-bottom: 1px solid #9fd4ca98;
+}
+.autor{
+    margin-left: 10%;
+}
+
+label{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color:rgb(119, 119, 119)
+}
+/* boton */
+
+.boton{
+
+    width: 50%;
+    height: 100%;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+
+div[class*=box] {
+	height: 33.33%;
+	width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #9FD4CA;
+    font-family: 'Concert One', cursive;
+    
+
+   
+
+}
+.btn {
+    
+    font-size: 20px;
+	padding: -1px;
+	text-align: center;
+	width: 100%;
+	cursor: pointer;
+    color: #9FD4CA!important;
+   
+    
+}
+.btn-two {
+	color: #9FD4CA;
+	transition: all 0.5s;
+	position: relative;	
+ 
+   
+}
+
+.btn-two button {
+	z-index: 2;	
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+}
+.btn-two::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.5s;
+	border-bottom: 1px solid rgba(255, 255, 255, 0);
+	
+}
+.btn-two::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.5s;
+	border-top: 1px solid rgba(255, 255, 255, 0);
+
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  top: 10px;
+  left: -22px;
+  border-bottom: 1px solid #9FD4CA;
+  
+
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  top: 10px;
+  left: -20px;
+  border-top: 1px solid #9FD4CA;
+
+
+}
+
+.error{
+    display: block;
+    width: 100%;
+    color: tomato;
+}
+
+hr, h2{
+    width: 30%;
+    margin: 2% auto;
+    color: #9fd4ca;
+    text-align: center;
+ 
+}

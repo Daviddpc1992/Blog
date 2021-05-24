@@ -1,0 +1,89 @@
+
+<hr>
+
+<h2>Incluye tu publicación</h2>
+
+<form class="formular" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Título" aria-label="Username"
+            aria-describedby="basic-addon1" formControlName="titulo">
+        <p class="error" *ngIf="checkControl('titulo', 'required')">
+            El titulo es requerido
+        </p>
+        <p class="error" *ngIf="checkControl('titulo', 'minlength')">
+            El tamaño del titulo debe tener mínimo 3 caracteres
+        </p>
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Una breve descripción" aria-describedby="basic-addon1" formControlName="descripcion">
+        <p class="error" *ngIf="checkControl('descripcion', 'required')">
+            La descripción es requerida
+        </p>
+        <p class="error" *ngIf="checkControl('descripcion', 'minlength')">
+            El tamaño de la descripción debe ser mínimo 5 caracteres
+        </p>
+    </div>
+    <div class="input-group mb-1">
+        <input type="text" class="form-control" placeholder="Url de imagen" aria-label="Username"
+            aria-describedby="basic-addon1" formControlName="imagen">
+        <p class="error" *ngIf="checkControl('imagen', 'required')">
+            La imagen es requerida
+        </p>
+    </div>
+
+    <div class="desplegables">
+
+        <div class="mb-3 categoria">
+            <label class="form-label">Categoría</label>
+            <select class="form-select" formControlName="categoria">
+                <option></option>
+                <option value="viajes">Viajes</option>
+                <option value="foto">Fotografía</option>
+                <option value="comida">Comida</option>
+            </select>
+
+            <p class="error" *ngIf="checkControl('categoria', 'required')">
+                Minimo tienes que asignar una categoria
+            </p>
+        </div>
+        <div class="mb-3 autor">
+            <label class="form-label"> Autor</label>
+            <select class="form-select" formControlName="autor">
+                <option></option>
+                <option>Maika</option>
+                <option>Miguel</option>
+                <option>Bruno</option>
+                <option>Juan</option>
+            </select>
+            <p class="error" *ngIf="checkControl('autor', 'required')">
+                Necesitamos saber quien lo publica
+            </p>
+        </div>
+    </div>
+
+    <div class="input-group">
+        <textarea class="form-control" aria-label="With textarea" placeholder="Texto"
+            formControlName="texto"></textarea>
+
+        <p class="error" *ngIf="checkControl('texto', 'required')">
+            El texto es requerido
+        </p>
+        <p class="error" *ngIf="checkControl('titulo', 'minlength')">
+            El tamaño del texto debe ser mínimo 10 caracteres
+        </p>
+    </div>
+
+
+
+    <div class="boton">
+        <div class="box-2">
+            <div class="btn btn-two">
+                <button type="submit" value="Enviar">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+<br>
