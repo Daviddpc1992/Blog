@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    height: 30%;
+  background-color: #445045; ;
+  overflow: hidden;
+  font-family: 'Concert One', cursive;
+}
+box-2{
+	overflow: hidden;
+}
+/* EFECTO X BOTONES*/
+.boton{
+    width: 50%;
+    height: 100%;
+}
+
+
+div[class*=box] {
+	height: 33.33%;
+	width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn {
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	cursor: pointer;
+    color: whitesmoke!important;
+   
+    
+}
+.btn-two {
+	color: #FFF;
+	transition: all 0.5s;
+	position: relative;	
+ 
+   
+}
+.btn-two a{
+	color: #FFF;
+}
+.btn-two a:hover{
+	color: #9FD4CA;
+}
+.btn-two span {
+	z-index: 2;	
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+}
+.btn-two::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.5s;
+	border-bottom: 1px solid rgba(255, 255, 255, 0);
+	
+}
+.btn-two::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.5s;
+	border-top: 1px solid rgba(255, 255, 255, 0);
+
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  top: -3px;
+  left: -22px;
+  border-bottom: 1px solid #9FD4CA;
+  
+
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  top: -3px;
+  left: -22px;
+  border-top: 1px solid #9FD4CA;
+
+
+}
